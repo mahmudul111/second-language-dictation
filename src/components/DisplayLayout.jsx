@@ -8,7 +8,7 @@ const DisplayLayout = () => {
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
       <h1 className="mt-40 text-white text-5xl font-bold">Second Language Dictation</h1>
-      <Link to='/root' className="btn btn-outline text-white mt-5">Get Started</Link>
+      <Link to='/login' className="btn btn-outline text-white mt-5">Get Started</Link>
     </div>
   </div>
 </div>

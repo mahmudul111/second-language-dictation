@@ -1,10 +1,10 @@
 const LeftSideNav = () => {
     return (
-        <div className="bg-green-200 border-solid border-2 border-sky-500">
+        <div className="bg-emerald-900 text-white border-solid border-2 border-sky-500">
             <div className="border-solid border-2 border-sky-500 text-center">
                 <h3 className="text-xl font-semibold my-2">Lesson ( 1 - 4 )</h3>
             </div>
-            <div className="border-solid border-2 border-sky-500 text-center">
+            <div className="border-solid border-b-2 border-sky-500 text-center">
             <h3 className="text-xl font-semibold my-2">Lesson ( 5 - 8 )</h3>
             </div>
             <div className="border-solid border-2 border-sky-500 text-center">
