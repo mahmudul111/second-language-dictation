@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const navLink = <>
-                <NavLink to='/root' className="text-xl font-semibold"><li>Home</li></NavLink>
-                <NavLink to='/about' className="ml-5 text-xl font-semibold"><li>About</li></NavLink>
+                <li><NavLink to='/root' className="text-xl font-semibold">Home</NavLink></li>
+                <li><NavLink to='/about' className="ml-5 text-xl font-semibold">About</NavLink></li>
     </>
     return (
         <div className="max-w-7xl mx-auto rounded-sm mb-10">
