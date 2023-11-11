@@ -11,6 +11,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import RootLayout from './components/RootLayout';
 import AuthProvider from './providers/AuthProvider';
+import About from './About';
 
 const router = createBrowserRouter([
   {
@@ -18,24 +19,29 @@ const router = createBrowserRouter([
     element: <DisplayLayout></DisplayLayout>,
   },
   {
-    path:'/login',
-    element:<Login></Login>
-  },
-  {
-    path:'/register',
-    element:<Register></Register>
-  },
-  {
     path:'/root',
     element:<RootLayout></RootLayout>,
     children:[
       {
         path:'/root',
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader:()=> fetch('fake.json')
       },
+      {
+        path:'/root/login',
+        element:<Login></Login>
+      },
+      {
+        path:'/root/register',
+        element:<Register></Register>
+      },
+      
     ]
   },
-  
+  {
+    path:'/about',
+    element:<About></About>
+  },
 
 ]);
 
