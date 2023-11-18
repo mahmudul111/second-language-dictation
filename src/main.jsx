@@ -13,6 +13,7 @@ import RootLayout from './components/RootLayout';
 import AuthProvider from './providers/AuthProvider';
 import About from './About';
 import MyCourses from './components/MyCourses';
+import TaskCard from './components/TaskCard';
 
 const router = createBrowserRouter([
   {
@@ -39,23 +40,29 @@ const router = createBrowserRouter([
         path:'/root/register',
         element:<Register></Register>
       },
-      {
-        path:'/root/courses',
-        element:<MyCourses></MyCourses>,
-        loader:()=> fetch('https://raw.githubusercontent.com/mahmudul111/second-language-dictation/main/public/fake.json')
-      },
-      {
-        path:'/root/courses/:id',
-        element:<MyCourses></MyCourses>,
-        loader:()=> fetch('https://raw.githubusercontent.com/mahmudul111/second-language-dictation/main/public/fake.json'),
-      },
       
     ]
+  },
+  {
+    path:'/root/courses',
+    element:<MyCourses></MyCourses>,
+    loader:()=> fetch('../fake.json')
+  },
+  {
+    path:'/root/courses/:id',
+    element:<MyCourses></MyCourses>,
+    loader:()=> fetch('/fake.json'),
   },
   {
     path:'/about',
     element:<About></About>
   },
+  {
+    path:'/root/task/:id',
+    element:<TaskCard></TaskCard>,
+    loader:()=> fetch('/fake.json'),
+  },
+  
   
 
 ]);

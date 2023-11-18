@@ -6,7 +6,7 @@ const LeftSideNav = () => {
     const [lessons, setLessons] = useState([]);
 
     useEffect(()=>{
-        fetch('https://raw.githubusercontent.com/mahmudul111/second-language-dictation/main/public/fake.json')
+        fetch('/fake.json')
         .then(res => res.json())
         .then(data => setLessons(data))
     },[])
@@ -15,7 +15,7 @@ const LeftSideNav = () => {
             <div className="border-solid border-2 border-sky-500 text-center">
             <h3 className="text-xl font-semibold my-2">
             {
-                    lessons.map(lesson => <LessonName key={lesson.id} lesson={lesson}></LessonName>)
+                    lessons?.map(lesson => <LessonName key={lesson.id} lesson={lesson}></LessonName>)
                 }
             </h3>
             </div>
