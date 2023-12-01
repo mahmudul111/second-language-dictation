@@ -14,6 +14,7 @@ import AuthProvider from './providers/AuthProvider';
 import About from './About';
 import MyCourses from './components/MyCourses';
 import TaskCard from './components/TaskCard';
+import PrivateRoute from './components/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -45,12 +46,12 @@ const router = createBrowserRouter([
   },
   {
     path:'/root/courses',
-    element:<MyCourses></MyCourses>,
+    element:<PrivateRoute><MyCourses></MyCourses></PrivateRoute>,
     loader:()=> fetch('../fake.json')
   },
   {
     path:'/root/courses/:id',
-    element:<MyCourses></MyCourses>,
+    element:<PrivateRoute><MyCourses></MyCourses></PrivateRoute>,
     loader:()=> fetch('/fake.json'),
   },
   {

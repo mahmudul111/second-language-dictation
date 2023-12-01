@@ -16,6 +16,7 @@ const MyCourses = () => {
           <h2 className="p-10 text-3xl">{lesson?.para}</h2>
           <h2 className="px-10 py-5 text-3xl">{lesson?.chinese}</h2>
           <h2 className="px-10 py-5 text-3xl">{lesson?.bangla}</h2>
+          
           <div className="flex justify-center mt-10 gap-5">
             <Link to={`/root/task/${id}`}>
               <div className="btn btn-outline">{lesson?.btn}</div>
