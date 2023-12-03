@@ -1,14 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import fake from "../assets/fake.js";
 import LessonName from "../cardComponent/LessonName";
-
 const LeftSideNav = () => {
-  const [lessons, setLessons] = useState([]);
+  const [lessons, setLessons] = useState(fake);
 
-  useEffect(() => {
-    fetch("/fake.json")
-      .then((res) => res.json())
-      .then((data) => setLessons(data));
-  }, []);
   return (
     <div className="">
       <div className="border-solid border-2 border-sky-500 text-center">
